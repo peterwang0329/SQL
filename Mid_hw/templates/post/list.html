@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/post/list.css') }}">
+    
+</head>
+
+<body>
+    <h1>Test Post</h1>
+    {% if request.query_params.get('error') %}
+    <script>
+        alert("{{ request.query_params['error'] }}");  // 弹出框显示错误信息
+    </script>
+    {% endif %}
+    <p class="welcome">
+        {{ "Welcome " + user['username'] + ", you may " if user else "" }}
+        <a href="/post/new" class="create-post-link">Create a Post</a> or 
+        {% if user %}
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </p>
+
+    <p class="post-count">
+        There are <strong>{{ posts|length }}</strong> posts!
+    </p>
+    <ul id="posts">
+        {% for post in posts %}
+        <li>
+            <a href="/post/{{ post.id }}">
+                <h2>{{ post.title }} -- by {{ post.username }}</h2>
+                <p>Read post</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>    
+</body>
+</html>
+{% endblock %}

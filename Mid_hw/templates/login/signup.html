@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', path='/login/login.css') }}">
+<a href="/" id="logo-link">
+    <img src="{{ url_for('static', path='images/home.png') }}" alt="Logo" id="logo">
+</a>
+<h1>Sign up</h1>
+<form action="/signup" method="post">
+    <p>
+        <input
+            type="text"
+            placeholder="username"
+            name="username"
+            value="{{ username | default('') }}"
+            required
+        >
+        {% if errors and errors.username %}
+        <span class="error">{{ errors.username }}</span>
+        {% endif %}
+    </p>
+    <p>
+        <input
+            type="password"
+            placeholder="password"
+            name="password"
+            required
+        >
+        {% if errors and errors.password %}
+        <span class="error">{{ errors.password }}</span>
+        {% endif %}
+    </p>
+    <p>
+        <input
+            type="email"
+            placeholder="email"
+            name="email"
+            value="{{ email | default('') }}"
+            required
+        >
+        {% if errors and errors.email %}
+        <span class="error">{{ errors.email }}</span>
+        {% endif %}
+    </p>
+    <p><input type="submit" value="Signup"></p>
+</form>
+{% endblock %}

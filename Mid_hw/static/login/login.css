@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    height: 100vh; /* 將高度設為全螢幕 */
+    margin: 0;
+    display: flex; /* 使用 Flexbox 將內容置中 */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-left: -35px;
+    width: 100%;
+    max-width: 450px; /* 最大寬度 */
+    background: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
+    text-align: center;
+}
+
+form p {
+    margin: 15px 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+p a {
+    margin-left: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+#logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: auto; 
+    cursor: pointer; /* 滑鼠變為指標 */
+    transition: transform 0.3s ease; /* 添加過渡效果 */
+}
+
+#logo:hover {
+    transform: scale(1.1); /* 滑鼠懸停時放大 */
+}
+
+#logo-link {
+    text-decoration: none;
+}

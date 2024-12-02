@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    padding: 20px;
+    margin: 0;
+}
+h1 {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    #posts {
+    list-style-type: none;
+    padding-left: 0;
+    }
+
+    #posts li {
+        background-color: #fff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #posts a {
+        display: block;  /* 使 a 標籤充滿整個 li */
+        text-decoration: none; 
+        color: inherit;  /* 繼承 li 文字顏色 */
+    }   
+
+    #posts a h2, #posts a p {
+        margin: 0;  /* 取消內部間距，避免重疊 */
+        text-decoration: none;
+    }   
+
+
+    .welcome {
+       font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .welcome a {
+        margin-left: 10px;
+    }
+
+    .welcome a:first-child {
+        margin-left: 0;
+    }
+
+    .create-post-link {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 1.1em;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .create-post-link:hover {
+        color: #218838;
+    }
+
+    .post-count {
+        font-size: 1.2em;
+        color: #333;
+        font-weight: bold;
+    }

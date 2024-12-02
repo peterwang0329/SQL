@@ -1,0 +1,37 @@
+/* 在 style.css 文件中或模板的 <style> 標籤中 */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.post-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-author {
+    font-size: 18px;
+    color: #777;
+    font-style: italic;
+}
+
+.post-body {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}

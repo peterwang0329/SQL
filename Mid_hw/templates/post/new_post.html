@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', path='/post/new_post.css') }}">
+<h1>New Post</h1>
+<form action="/post" method="post" class="post-form">
+    <p><input type="text" placeholder="Title" name="title" class="form-input"></p>
+    <p><textarea placeholder="Contents" name="body" class="form-textarea"></textarea></p>
+    <p><input type="submit" value="Create" class="form-submit"></p>
+</form>
+{% endblock %}

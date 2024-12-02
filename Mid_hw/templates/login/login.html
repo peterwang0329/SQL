@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', path='/login/login.css') }}">
+<a href="/" id="logo-link">
+    <img src="{{ url_for('static', path='images/home.png') }}" alt="Logo" id="logo">
+</a>
+<div>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <p><input type="text" placeholder="Username" name="username"></p>
+        <p><input type="password" placeholder="Password" name="password"></p>
+        <p><input type="submit" value="Login"></p>
+        <p>New user? <a href="/signup">Create an account</a></p>
+    </form>
+</div>
+{% endblock %}
